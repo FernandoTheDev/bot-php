@@ -13,6 +13,7 @@
  $chat_id = $message->chat->id;
  
  $message_id = $update->message->message_id;
+
  $tipo = $message->chat->type;
  
  $text = $message->text;
@@ -80,6 +81,8 @@ if (strpos($text, "/start") === 0){
   $button[] = ['text'=>"Show Alert 1",'callback_data'=>"showAlert 1"];
   
   $button[] = ['text'=>"Show Alert 2",'callback_data'=>"showAlert 2"];
+	
+  $button[] = ['text'=>"Developer",'url'=>"t.me/fernandothedev"];
   
   $menu['inline_keyboard'] = array_chunk($button, 2);
   
@@ -153,6 +156,8 @@ function editMessage($dados){
  
  $button[] = ['text'=>"Show Alert 2",'callback_data'=>"showAlert 2"];
  
+ $button[] = ['text'=>"Developer",'url'=>"t.me/fernandothedev"];
+
  $menu['inline_keyboard'] = array_chunk($button, 2);
  
  bot("editMessageText",
