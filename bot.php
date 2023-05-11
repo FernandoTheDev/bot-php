@@ -73,9 +73,11 @@ if (strpos($text, "/start") === 0){
 
   $txt = "Hello *".$name."*";
   
-  $button[] = ['text'=>"EditMessage",'callback_data'=>"editMessage 1"];
+  $button[] = ['text'=>"EditMessage",'callback_data'=>"editMessage 0"];
   
-  $button[] = ['text'=>"Show Alert 1",'callback_data'=>"showAlert 2"];
+  $button[] = ['text'=>"",'callback_data'=>"NULL"];
+        
+  $button[] = ['text'=>"Show Alert 1",'callback_data'=>"showAlert 1"];
   
   $button[] = ['text'=>"Show Alert 2",'callback_data'=>"showAlert 2"];
   
@@ -144,7 +146,9 @@ function editMessage($dados){
  $txt = "Hello".$count." *".$name."*";
  
  $button[] = ['text'=>"EditMessage",'callback_data'=>"editMessage ".$count];
- 
+
+ $button[] = ['text'=>"",'callback_data'=>"NULL"];
+
  $button[] = ['text'=>"Show Alert 1",'callback_data'=>"showAlert 1"];
  
  $button[] = ['text'=>"Show Alert 2",'callback_data'=>"showAlert 2"];
